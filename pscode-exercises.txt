@@ -28,7 +28,7 @@ define function three(input_1, input_2, input_3, input_4, input_5):
 	for each number in (input_1, input_2, input_3, input_4, input_5):
 		if number > maximum:
 			set maximum = number
-		if number < minimum:
+		else if number < minimum:
 			set minimum = number
 	
 	print "The average of these numbers is:" average
