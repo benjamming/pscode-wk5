@@ -1,17 +1,15 @@
 // Exercise 1: Calculate the Sum of Two Numbers
 
-define function add(input_1, input_2):
-	return input_1 + input_2
+get number1, number2
+return number1 + number2
 
 // Exercise 2: Check if a Number is Even or Odd
 
-define function even_or_odd(number):
-	set remainder = number mod 2
-	if remainder equals 0:
-		print "even"
-	else:
-		print "odd"
-
+get number
+if (number % 2) == 0:
+	return "Even"
+else:
+	return "Odd"
 
 // Exercise 3: 
 Write pseudo code that will perform the following.    
@@ -21,18 +19,23 @@ b) Calculate the average of the five numbers.
 c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
 d) Write out the results found from steps b and c with a message describing what they are
 
-define function three(input_1, input_2, input_3, input_4, input_5):
-	set average = (input_1 + input_2 + input_3 + input_4 + input_5) divided by 5
-	set maximum = 0
-	set minimum = 0
-	for each number in (input_1, input_2, input_3, input_4, input_5):
-		if number > maximum:
-			set maximum = number
-		else if number < minimum:
-			set minimum = number
-	
-	print "The average of these numbers is:" average
-	print "The maximum is:" maximum
-	print "The minimum is:" minimum
+get numbers A, B, C, D, E
+average = (A+B+C+D+E)/5
+
+minimum = 0
+maximum = 0
+
+for each number in (A, B, C, D, E):
+	if number < minimum:
+		minimum = number
+	else if number > maximum:
+		maximum = number
+
+print "The five numbers being compared are": (A, B, C, D, E)
+print "Their average is": average
+print "The minimum is": minimum
+print "The maximum is": maximum
+
+
 
 -- END --
